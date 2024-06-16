@@ -1,0 +1,33 @@
+#caja1{
+    background-color: rgb(61, 105, 98);
+    width: 400px;
+    height: 500px;
+    border: 2px solid white;
+    margin: 0 auto;
+    margin-top: 50px;
+    
+    
+}
+body{
+    background-color: rgb(41, 38, 38);
+    font-family: "Lucida Console", Monaco, monospace;
+
+}
+#texto{
+    color: white;
+    text-align: center;
+}
+
+#titulo{
+    color: white;
+    text-align: center;
+}
+
+.botonIng{
+    margin-bottom: 10px;
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+
+}
+
