@@ -6,7 +6,6 @@
     margin: 0 auto;
     margin-top: 50px;
     
-    
 }
 body{
     background-color: rgb(41, 38, 38);
@@ -25,9 +24,18 @@ body{
 
 .botonIng{
     margin-bottom: 10px;
+    background-color: beige;
     padding: 5px;
     margin: 5px;
     display: inline-block;
 
 }
+.tablero{
+    background-color: rgb(61, 105, 98);
+    width: 1300px;
+    height: 750px;
+    border: 2px solid white;
+    margin: 0 auto;
+    margin-top: 50px;
 
+}
