@@ -5,6 +5,7 @@
     border: 2px solid white;
     margin: 0 auto;
     margin-top: 50px;
+    text-align: center;
     
 }
 body{
@@ -23,13 +24,46 @@ body{
 }
 
 .botonIng{
-    margin-bottom: 10px;
-    background-color: beige;
-    padding: 5px;
-    margin: 5px;
-    display: inline-block;
+    background:#1AAB8A;
+    color:#fff;
+    border:none;
+    position:relative;
+    height:60px;
+    font-size:1.6em;
+    padding:0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
 
 }
+
+.botonIng:hover{
+    background:#fff;
+    color:#1AAB8A;
+}
+
+.botonIng:before,.botonIng:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #1AAB8A;
+    transition:400ms ease all;
+  }
+
+.botonIng:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+.botonIng:hover:before,.botonIng:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+  
 .tablero{
     background-color: rgb(61, 105, 98);
     width: 1300px;
@@ -41,8 +75,8 @@ body{
 }
 .cartas{
     background-color: rgb(203, 241, 235);
-    width: 30px;
-    height: 30px;
+    width: 100px;
+    height: 100px;
     margin: 30px;
     display: inline-block;
 }

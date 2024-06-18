@@ -6,25 +6,26 @@ function lobby(e){//elegir opción y pasar a la siguiente fase
 function tablero(e){// generación de tablero
     const tablero = document.createElement("div")
     tablero.className = "tablero"
+    tablero.id = "tablero"
     const caja2 = document.getElementById("caja2")
     caja2.appendChild(tablero)
 
 }
 
 function desplegarjuego8(e){
-    const contenedor = document.getElementById("caja2")
+    const contenedor = document.getElementById("tablero")
     const nuevosElementos = creadorDeElementos(8)
     agregadorDeElementosAlHtml(nuevosElementos, contenedor)
 }
 
 function desplegarjuego16(e){
-    const contenedor = document.getElementById("caja2")
+    const contenedor = document.getElementById("tablero")
     const nuevosElementos = creadorDeElementos(16)
     agregadorDeElementosAlHtml(nuevosElementos, contenedor)
 }
 
 function desplegarjuego32(e){
-    const contenedor = document.getElementById("caja2")
+    const contenedor = document.getElementById("tablero")
     const nuevosElementos = creadorDeElementos(32)
     agregadorDeElementosAlHtml(nuevosElementos, contenedor)
 }
@@ -34,7 +35,6 @@ function creadorDeElementos(NumeroDeElementos){
     for(let i = 0; i < NumeroDeElementos; i++){
         const elemento = document.createElement("p")
         elemento.className = "cartas"
-        elemento.textContent = `${i}`
         elementos.push(elemento)
     }
     return elementos
