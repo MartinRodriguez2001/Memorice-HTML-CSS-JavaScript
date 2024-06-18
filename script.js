@@ -11,15 +11,21 @@ function tablero(e){// generación de tablero
 
 }
 
-function juego8(e){
-    const botones = docuement.getElementsByClassName("botonIng")
-    const botonJuego8 = botones[0]
-    botonJuego8.addEventListener("click", desplegarjuego8)
-}
-
 function desplegarjuego8(e){
     const contenedor = document.getElementById("caja2")
     const nuevosElementos = creadorDeElementos(8)
+    agregadorDeElementosAlHtml(nuevosElementos, contenedor)
+}
+
+function desplegarjuego16(e){
+    const contenedor = document.getElementById("caja2")
+    const nuevosElementos = creadorDeElementos(16)
+    agregadorDeElementosAlHtml(nuevosElementos, contenedor)
+}
+
+function desplegarjuego32(e){
+    const contenedor = document.getElementById("caja2")
+    const nuevosElementos = creadorDeElementos(32)
     agregadorDeElementosAlHtml(nuevosElementos, contenedor)
 }
 
@@ -28,7 +34,7 @@ function creadorDeElementos(NumeroDeElementos){
     for(let i = 0; i < NumeroDeElementos; i++){
         const elemento = document.createElement("p")
         elemento.className = "cartas"
-        elemento.textContent = `elemento ${i+1}`
+        elemento.textContent = `${i}`
         elementos.push(elemento)
     }
     return elementos
@@ -41,10 +47,16 @@ function agregadorDeElementosAlHtml(elementos, contenedor){
 
 document.addEventListener("DOMContentLoaded", (event) => {
     const btnAdd = document.getElementsByClassName("botonIng");
+    const boton8 = btnAdd[0]
+    const boton16 = btnAdd[1]
+    const boton32 = btnAdd[2]
+
     Array.from(btnAdd).forEach(el => {
         el.addEventListener("click", lobby)
         el.addEventListener("click", tablero)
-        el.addEventListener("click", desplegarjuego8);
     });
+    boton8.addEventListener("click",desplegarjuego8)
+    boton16.addEventListener("click",desplegarjuego16)
+    boton32.addEventListener("click",desplegarjuego32)
 });
 
